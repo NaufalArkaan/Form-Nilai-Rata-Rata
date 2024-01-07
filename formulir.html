@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULIR NILAI SISWA</title>
+    <link rel="stylesheet" href="formulir.css">
+</head>
+
+<body>
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Masukan username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Masukan Password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="container" id="inputContainer" style="display: none;">
+        <h2>Form Input Nilai Siswa</h2>
+        <form id="inputForm">
+            <label for="nama">Nama Siswa:</label>
+            <input type="text" id="nama" placeholder="Masukan Nama" required>
+
+            <label for="kelas">Kelas:</label>
+            <select id="kelas" required>
+                <option value="">Pilih Kelas</option>
+                <option value="XII MIPA 1">XII MIPA 1</option>
+                <option value="XII MIPA 2">XII MIPA 2</option>
+                <option value="XII MIPA 3">XII MIPA 3</option>
+                <option value="XII MIPA 4">XII MIPA 4</option>
+                <option value="XII MIPA 5">XII MIPA 5</option>
+            </select>
+
+            <label for="tugas">Nilai Tugas:</label>
+            <input type="number" id="tugas" min="0" max="100" required>
+
+            <label for="uts">Nilai UTS:</label>
+            <input type="number" id="uts" min="0" max="100" required>
+
+            <label for="uas">Nilai UAS:</label>
+            <input type="number" id="uas" min="0" max="100" required>
+
+            <label for="kehadiran">Jumlah Kehadiran:</label>
+            <input type="number" id="kehadiran" min="0" max="16" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- <div class="container" id="outputContainer" style="display: none;">
+            <h2>Hasil Nilai Siswa</h2>
+            <form id="outputForm">
+                <label for="outputNama">Nama Siswa:</label>
+                <input type="text" id="outputNama" readonly>
+
+                <label for="outputKelas">Kelas:</label>
+                <input type="text" id="outputKelas" readonly>
+
+                <label for="outputTugas">Nilai Tugas:</label>
+                <input type="text" id="outputTugas" readonly>
+
+                <label for="outputUTS">Nilai UTS:</label>
+                <input type="text" id="outputUTS" readonly>
+
+                <label for="outputUAS">Nilai UAS:</label>
+                <input type="text" id="outputUAS" readonly>
+
+                <label for="outputKehadiran">Jumlah Kehadiran:</label>
+                <input type="text" id="outputKehadiran" readonly>
+
+                <label for="outputNilaiAkhir">Nilai Akhir:</label>
+                <input type="text" id="outputNilaiAkhir" readonly>
+
+                <label for="outputPersentaseKehadiran">Persentase Kehadiran:</label>
+                <input type="text" id="outputPersentaseKehadiran" readonly>
+
+                <button type="button" onclick="resetForm()">Reset</button>
+            </form>
+        </div> -->
+
+    <div class="container" id="outputContainer" style="display: none;">
+        <h2>Profile</h2>
+        <div id="profile">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+                alt="Profile Picture" class="rounded">
+            <p><strong>Status/Role:</strong> <span id="outputRole"></span></p>
+            <p><strong>Nama Siswa:</strong> <span id="outputNama"></span></p>
+            <p><strong>Kelas:</strong> <span id="outputKelas"></span></p>
+            <p><strong>Nilai Akhir:</strong> <span id="outputNilaiAkhir"></span></p>
+            <p><strong>Persentase Kehadiran:</strong> <span id="outputPersentaseKehadiran"></span>%</p>
+        </div>
+        <div class="btnProfile">
+            <button type="button" onclick="backToLogin()">Back to Login</button>
+            <button type="button" id="resetButton" onclick="resetForm()">Reset</button>
+        </div>
+    </div>
+</body>
+<script src="formulir.js"></script>
+
+</html>
